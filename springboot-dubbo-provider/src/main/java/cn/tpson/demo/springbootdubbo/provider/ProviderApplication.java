@@ -2,6 +2,8 @@ package cn.tpson.demo.springbootdubbo.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -13,7 +15,9 @@ public class ProviderApplication {
     private static CountDownLatch countDownLatch = new CountDownLatch(1);
 
     public static void main(String[] args) throws InterruptedException {
-        SpringApplication.run(ProviderApplication.class, args).registerShutdownHook();
+        ConfigurableApplicationContext context = SpringApplication.run(ProviderApplication.class, args);
+        context.registerShutdownHook();
+        SpringUtils.setApplicationContext(context);
         countDownLatch.await();
     }
 }

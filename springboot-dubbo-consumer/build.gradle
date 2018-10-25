@@ -28,6 +28,8 @@ sourceCompatibility = 1.8
 
 
 dependencies {
+    implementation project(':common')
+    implementation project(':springboot-dubbo-common')
     implementation project(':springboot-dubbo-api')
     implementation('org.springframework.boot:spring-boot-starter-web')
     compile('com.alibaba.boot:dubbo-spring-boot-starter:0.2.0')

@@ -11,15 +11,10 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-
-group = 'cn.tpson.demo.springbootdubbo'
+group = 'cn.tpson.demo.common'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 dependencies {
-    implementation project(':common')
-    implementation project(':springboot-dubbo-common')
+    implementation('commons-beanutils:commons-beanutils:1.9.3')
 }

@@ -5,6 +5,10 @@
     </resultMap>
 
     <select id="findByUsername" resultType="UserDO">
+        select username, password from t_user
+    </select>
+
+    <select id="findById" resultType="UserDO">
         select id from t_user
     </select>
 </mapper>

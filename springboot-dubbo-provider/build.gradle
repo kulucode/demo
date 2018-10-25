@@ -27,12 +27,14 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 dependencies {
+    implementation project(':common')
+    implementation project(':springboot-dubbo-common')
 	implementation project(':springboot-dubbo-api')
 //    implementation('org.springframework.boot:spring-boot-starter-web')
     compile('com.alibaba.boot:dubbo-spring-boot-starter:0.2.0')
 //	testImplementation('org.springframework.boot:spring-boot-starter-test')
-    implementation('org.springframework.boot:spring-boot-starter-jdbc')
-    implementation('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
     runtime('org.postgresql:postgresql')
-    compile "com.alibaba:fastjson:1.2.47"
+    compile('com.alibaba:fastjson:1.2.47')
 }

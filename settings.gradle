@@ -7,7 +7,9 @@
  * in the user guide at https://docs.gradle.org/4.6/userguide/multi_project_builds.html
  */
 
-rootProject.name = 'demo-springboot-dubbo'
+rootProject.name = 'demo'
+include 'common'
+include 'springboot-dubbo-common'
 include 'springboot-dubbo-api'
 include 'springboot-dubbo-provider'
 include 'springboot-dubbo-consumer'

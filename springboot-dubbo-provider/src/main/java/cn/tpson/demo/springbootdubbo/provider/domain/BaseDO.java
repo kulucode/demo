@@ -1,9 +1,7 @@
 package cn.tpson.demo.springbootdubbo.provider.domain;
 
-import org.apache.ibatis.annotations.Property;
-
 import java.io.Serializable;
-import java.util.Date;
+import java.time.Instant;
 import java.util.StringJoiner;
 
 /**
@@ -12,8 +10,8 @@ import java.util.StringJoiner;
 public class BaseDO implements Serializable {
     private Long id;
     private Boolean deleted;
-    private Date gmtCreate;
-    private Date gmtModified;
+    private Instant gmtCreate;
+    private Instant gmtModified;
     private Long version;
 
     public Long getId() {
@@ -32,19 +30,19 @@ public class BaseDO implements Serializable {
         this.deleted = deleted;
     }
 
-    public Date getGmtCreate() {
+    public Instant getGmtCreate() {
         return gmtCreate;
     }
 
-    public void setGmtCreate(Date gmtCreate) {
+    public void setGmtCreate(Instant gmtCreate) {
         this.gmtCreate = gmtCreate;
     }
 
-    public Date getGmtModified() {
+    public Instant getGmtModified() {
         return gmtModified;
     }
 
-    public void setGmtModified(Date gmtModified) {
+    public void setGmtModified(Instant gmtModified) {
         this.gmtModified = gmtModified;
     }
 
